@@ -1,7 +1,6 @@
 import {StyleSheet} from 'react-native';
 import styled from 'styled-components/native';
-import {hexToRGBA} from './utils';
-import * as Animatable from 'react-native-animatable';
+import {hexToRGBA} from '../utils';
 
 const colours = {
   dark: '#1A535C',
@@ -11,8 +10,13 @@ const colours = {
   plane: '#FFE66D'
 };
 
+const ContainerBackgroundStyles = {
+  width: '100%',
+  height: '100%'
+};
+
 const Heading = styled.Text`
-    padding-top: 10%;
+    margin-bottom: 5%;
     fontFamily: 'lobster';
     font-size: 48;
     font-weight: bold;
@@ -23,28 +27,25 @@ const Heading = styled.Text`
     color: ${colours.base}`;
 
 const Container = styled.View`
+    padding-top: 15%;
     flex: 1;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flexDirection: column;
-    background-color: ${colours.dark};`;
+`;
 
 const RoundedBox = styled.View`
-    margin-top: 15%;
-    padding: 20px;
+    margin-top: 25%;
+    padding: 5%;
     background: ${hexToRGBA(colours.light, 0.8)};
     borderRadius: 10;
     width: 80%;
-    height: 60%;
 `;
-
-const AnimatableRoundedBox = Animatable.createAnimatableComponent(RoundedBox);
-
 
 const Quote = styled.Text`
     text-align: center;
     color: white;
 `;
 
-export {Heading, Container, Quote, RoundedBox, AnimatableRoundedBox};
+export {Heading, Container, Quote, RoundedBox, ContainerBackgroundStyles};

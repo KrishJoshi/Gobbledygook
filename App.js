@@ -1,15 +1,20 @@
 import React from 'react';
-import {Container, Heading, Quote, AnimatableRoundedBox} from './components';
+import {Container, Heading, ContainerBackgroundStyles, Quote, RoundedBox} from './components/styled-components';
 import {Font} from 'expo';
-import {StatusBar} from 'react-native';
+import {AnimatableCat} from './components/cat';
+import background from './assets/background.png';
+import {ImageBackground, StatusBar} from 'react-native';
 
 export default class App extends React.Component {
   constructor() {
     super();
+  }
+
+  componentWillMount() {
     StatusBar.setBarStyle('light-content', true);
-    this.state = {
+    this.setState({
       fontLoaded: false
-    };
+    })
   }
 
   async componentDidMount() {
@@ -21,12 +26,15 @@ export default class App extends React.Component {
 
   render() {
     return this.state.fontLoaded ? (
-      <Container>
-        <Heading>Cookies</Heading>
-        <AnimatableRoundedBox animation="bounce" easing="ease-in-out" iterationCount="infinite">
-          <Quote>Shake phone for a quote</Quote>
-        </AnimatableRoundedBox>
-      </Container>
+      <ImageBackground source={background} style={ContainerBackgroundStyles}>
+        <Container>
+          <Heading>Gobbledygook</Heading>
+          <AnimatableCat animation="slideInDown" iterationCount={5} direction="alternate"/>
+          <RoundedBox>
+            <Quote>Shake your phone</Quote>
+          </RoundedBox>
+        </Container>
+      </ImageBackground>
     ) : null;
   }
 }
