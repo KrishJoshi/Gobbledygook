@@ -4,7 +4,8 @@ import {Font} from 'expo';
 import {AnimatableCat} from './components/cat';
 import background from './assets/background.png';
 import {ImageBackground, StatusBar, TouchableHighlight} from 'react-native';
-import RNShakeEvent from 'react-native-shake-event';
+import {ShakeEventExpo} from './components/ShakeEventExpo.js';
+import {quotes} from './assets/quotes';
 
 export default class App extends React.Component {
   constructor() {
@@ -15,13 +16,16 @@ export default class App extends React.Component {
     StatusBar.setBarStyle('light-content', true);
     this.setState({
       fontLoaded: false,
-      shakeText: 'Shake your phone'
+      shakeText: 'Shake!'
     });
 
-    RNShakeEvent.addEventListener('shake', () => {
-      this.setState({
-        shakeText: 'Done!'
-      })
+    ShakeEventExpo.addListener(() => {
+
+      const rand = Math.floor(Math.random() * quotes.length);
+
+      const shakeText = quotes[rand];
+
+      this.setState({shakeText})
     });
   }
 
@@ -32,10 +36,19 @@ export default class App extends React.Component {
     this.setState({fontLoaded: true});
   }
 
-  _onClick = () =>
-    this.setState({
-      shakeText: 'Done!'
-    });
+
+  componentWillUnmount() {
+    ShakeEventExpo.removeListener();
+  }
+
+
+  _onClick = () => {
+    const rand = Math.floor(Math.random() * quotes.length);
+
+    const shakeText = quotes[rand];
+
+    this.setState({shakeText})
+  };
 
 
   render() {
