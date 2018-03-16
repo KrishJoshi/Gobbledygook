@@ -27,7 +27,7 @@ const Heading = styled.Text`
     color: ${colours.base}`;
 
 const Container = styled.View`
-    padding-top: 15%;
+    padding-top: 8%;
     flex: 1;
     display: flex;
     justify-content: flex-start;
@@ -36,7 +36,7 @@ const Container = styled.View`
 `;
 
 const RoundedBox = styled.View`
-    margin-top: 25%;
+    margin-top: 15%;
     padding: 5%;
     background: ${hexToRGBA(colours.light, 0.8)};
     borderRadius: 10;
