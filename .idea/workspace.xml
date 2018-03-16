@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="99175aa4-e28c-40d5-9821-e7a22a7bcde2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/assets/background.png" afterPath="$PROJECT_DIR$/assets/background.png" />
-      <change beforePath="$PROJECT_DIR$/components/styled-components.js" afterPath="$PROJECT_DIR$/components/styled-components.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -48,8 +46,8 @@
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <element signature="e#6465#6469#0" expanded="true" />
-                <element signature="e#6616#6620#0" expanded="true" />
+                <element signature="e#6217#6221#0" expanded="true" />
+                <element signature="e#6368#6372#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -266,10 +264,18 @@
       <workItem from="1519493898251" duration="3065000" />
       <workItem from="1519590586477" duration="6903000" />
     </task>
+    <task id="LOCAL-00001" summary="changed bg and some padding">
+      <created>1521230422719</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1521230422719</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27064000" />
+    <option name="totallyTimeSpent" value="27329000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1649" height="975" extended-state="0" />
@@ -310,6 +316,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="changed bg and some padding" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed bg and some padding" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -459,8 +469,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#6465#6469#0" expanded="true" />
-            <element signature="e#6616#6620#0" expanded="true" />
+            <element signature="e#6217#6221#0" expanded="true" />
+            <element signature="e#6368#6372#0" expanded="true" />
           </folding>
         </state>
       </provider>
