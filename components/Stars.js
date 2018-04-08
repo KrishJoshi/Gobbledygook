@@ -7,7 +7,7 @@ import {View} from 'react-native';
 import * as Animatable from 'react-native-animatable';
 
 
-const MONEY_DIMENSIONS = {width: 49, height: 26};
+const STARS_DIMENSIONS = {width: 49, height: 26};
 const SCREEN_DIMENSIONS = Dimensions.get('window');
 const WIGGLE_ROOM = 50;
 
@@ -44,7 +44,7 @@ const Swinging = ({amplitude, rotation = 7, delay, duration = 700, children}) =>
 const Falling = ({duration, delay, style, children}) => (
   <Animatable.View
     animation={{
-      from: {translateY: -MONEY_DIMENSIONS.height - WIGGLE_ROOM},
+      from: {translateY: -STARS_DIMENSIONS.height - WIGGLE_ROOM},
       to: {translateY: SCREEN_DIMENSIONS.height + WIGGLE_ROOM}
     }}
     duration={duration}
@@ -86,10 +86,10 @@ const Stars = ({count = 15, duration = 3000}) => (
           style={{
             position: 'absolute',
             paddingHorizontal: WIGGLE_ROOM,
-            left: randomize(SCREEN_DIMENSIONS.width - MONEY_DIMENSIONS.width) - WIGGLE_ROOM
+            left: randomize(SCREEN_DIMENSIONS.width - STARS_DIMENSIONS.width) - WIGGLE_ROOM
           }}
         >
-          <Swinging amplitude={MONEY_DIMENSIONS.width / 5} delay={randomize(duration)}>
+          <Swinging amplitude={STARS_DIMENSIONS.width / 5} delay={randomize(duration)}>
             <Star size={randomize(100)}/>
           </Swinging>
         </Falling>

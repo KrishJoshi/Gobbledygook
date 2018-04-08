@@ -13,6 +13,7 @@ export default class App extends React.Component {
     super();
   }
 
+
   componentWillMount() {
     StatusBar.setBarStyle('light-content', true);
     this.setState({
@@ -32,7 +33,7 @@ export default class App extends React.Component {
 
   async componentDidMount() {
     await Font.loadAsync({
-      'lobster': require('./assets/fonts/lobster.ttf')
+      'KBGobbleDay': require('./assets/fonts/KBGobbleDay.ttf')
     });
     this.setState({fontLoaded: true});
   }
@@ -55,11 +56,11 @@ export default class App extends React.Component {
         <Container>
           <Heading>Gobbledygook</Heading>
           <AnimatableCat animation="slideInDown" iterationCount={5} direction="alternate"/>
-          <TouchableHighlight onPress={this._onClick}>
+          <TouchableOpacity onPress={this._onClick}>
             <RoundedBox>
               <Quote onClick={this._onClick}>{this.state.shakeText}</Quote>
             </RoundedBox>
-          </TouchableHighlight>
+          </TouchableOpacity>
         </Container>
       </ImageBackground>
     ) : null;

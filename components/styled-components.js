@@ -17,7 +17,7 @@ const ContainerBackgroundStyles = {
 
 const Heading = styled.Text`
     margin-bottom: 5%;
-    fontFamily: 'lobster';
+    fontFamily: 'KBGobbleDay';
     font-size: 48;
     font-weight: bold;
     shadow-color: #4ECDC4;
